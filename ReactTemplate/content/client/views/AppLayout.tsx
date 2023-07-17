@@ -5,7 +5,6 @@ import withWidth from '@material-ui/core/withWidth';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import defaultTheme from '../styles/theme-default';
-import auth from '../auth';
 
 const shouldSidebarOpen = (width: string) => width !== 'sm';
 
@@ -28,8 +27,6 @@ class AppLayout extends React.Component<IAppLayoutProps, AppLayoutModel> {
     super(props);
 
     this.vm = dotnetify.react.connect('AppLayout', this, {
-      headers: { Authorization: 'Bearer ' + auth.getAccessToken() },
-      exceptionHandler: _ => auth.signOut(),
       onRouteEnter: (path, template) => {
         template.Target = 'Content';
       }

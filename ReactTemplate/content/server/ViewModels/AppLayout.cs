@@ -5,7 +5,6 @@ using DotNetify.Security;
 
 namespace projectName;
 
-[Authorize]
 public class AppLayout : BaseVM, IRoutable
 {
    private enum Route

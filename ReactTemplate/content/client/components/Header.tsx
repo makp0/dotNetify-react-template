@@ -8,7 +8,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MenuIcon from '@material-ui/icons/Menu';
 import blue from '@material-ui/core/colors/blue';
-import auth from '../auth';
 
 const useStyles = makeStyles({
   root: {
@@ -43,7 +42,7 @@ export default function Header({ styles, onSidebarToggle }: IHeaderProps) {
 
   const handleIconClick = (event: React.MouseEvent) => setAnchorEl(event.currentTarget);
   const handleMenuClose = () => setAnchorEl(null);
-  const handleMenuClick = () => auth.signOut();
+  const handleMenuClick = () => {};
 
   return (
     <div className={classes.root}>

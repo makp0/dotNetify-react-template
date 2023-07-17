@@ -5,7 +5,6 @@ using DotNetify.Security;
 
 namespace projectName;
 
-[Authorize]
 public class Dashboard : BaseVM, IRoutable
 {
    private IDisposable _subscription;

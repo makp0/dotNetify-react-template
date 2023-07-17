@@ -4,7 +4,6 @@ using DotNetify.Security;
 
 namespace projectName;
 
-[Authorize]
 public class Form : BaseVM, IRoutable
 {
    private readonly IEmployeeService _employeeService;

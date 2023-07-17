@@ -13,7 +13,6 @@ import Utilization from '../components/dashboard/Utilization';
 import RecentActivities, { ActivityModel } from '../components/dashboard/RecentActivities';
 import globalStyles from '../styles/styles';
 import defaultTheme from '../styles/theme-default';
-import auth from '../auth';
 
 class DashboardModel {
   Download: string;
@@ -38,7 +37,6 @@ export default class Dashboard extends React.Component<any, DashboardModel> {
     this.vm = dotnetify.react.connect('Dashboard', this, {
       exceptionHandler: ex => {
         alert(ex.message);
-        auth.signOut();
       }
     });
     this.dispatch = state => this.vm.$dispatch(state);

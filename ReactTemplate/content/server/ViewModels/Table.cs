@@ -6,7 +6,6 @@ using DotNetify.Security;
 
 namespace projectName;
 
-[Authorize]
 public class Table : BaseVM
 {
    private readonly IEmployeeService _employeeService;
